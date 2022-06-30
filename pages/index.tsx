@@ -2,7 +2,8 @@ import type { NextPage } from 'next'
 import getCurrentTime from '../utili/time'
 
 const Home: NextPage = () => {
-  const { hour, minutes, seconds } = getCurrentTime()
+  const date = new Date()
+  const { hour, minutes, seconds } = getCurrentTime(date)
   return (
      <div className='grid content-center h-screen border'>
       <div className='flex justify-center text-center'>
